@@ -22,4 +22,4 @@ puts Coverage.result
 # method_b_called
 # {"/Users/danmayer/projects/coverage-bug/covercheck.rb"=>[]}
 #
-# I would expect after the second coverage.start and calling new lines in the file by calling ethod B to have those lines output as part of the 2nd Coverage.result call.
+# I would expect after the second coverage.start and calling new lines in the file by calling method B to have those lines output as part of the 2nd Coverage.result call.
