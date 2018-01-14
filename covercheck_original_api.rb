@@ -9,7 +9,7 @@ end
 method_a
 puts Coverage.result
  
-puts "this line is run betwwen coverage being enabled and shouldn't get tracked"
+puts "this line is run between coverage being enabled and shouldn't get tracked"
  
 Coverage.start
 method_b

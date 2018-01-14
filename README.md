@@ -90,7 +90,7 @@ The expected results would be something like below:
 ```ruby
 method_a called
 {"/Users/danmayer/projects/coverage-bug/covercheck.rb"=>[1, 1, nil, nil, 1, 0, nil, nil, 1, 1, nil, 0, nil, 0, 0, 0]}
-puts "this line is run betwwen coverage being enabled and shouldn't get tracked"
+puts "this line is run between coverage being enabled and shouldn't get tracked"
 method_b_called
 {"/Users/danmayer/projects/coverage-bug/covercheck.rb"=>[0, 0, nil, nil, 1, 1, nil, nil, 1, 1, nil, 0, nil, 1, 1, 1]}
 ```

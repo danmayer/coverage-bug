@@ -12,7 +12,7 @@ puts Coverage.pause
 puts Coverage.peek_result
 puts Coverage.reset
  
-puts "this line is run betwwen coverage being enabled and shouldn't get tracked"
+puts "this line is run between coverage being enabled and shouldn't get tracked"
  
 Coverage.resume
 method_b
