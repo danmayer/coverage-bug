@@ -1,7 +1,7 @@
 Ruby coverage-bug
 ============
 
-This shows a bug with Ruby's Coverage, as tracked on [ruby bug tracker #9572](https://bugs.ruby-lang.org/issues/9572)
+This shows a bug with Ruby's Coverage, as tracked on [ruby bug tracker #9572](https://bugs.ruby-lang.org/issues/9572).
 
 to execute just run: `ruby ./example.rb`
 
@@ -95,4 +95,6 @@ method_b_called
 {"/Users/danmayer/projects/coverage-bug/covercheck.rb"=>[0, 0, nil, nil, 1, 1, nil, nil, 1, 1, nil, 0, nil, 1, 1, 1]}
 ```
 
-This could allow some extremely interesting code usage tracking, such as pausing and resuming in before / after hooks in rails to track usage only in particular routes, controllers, modules, or etc.  
+This could allow some extremely interesting code usage tracking, such as pausing and resuming in before / after hooks in Rails to track usage only in particular routes, controllers, modules, or etc. Using reset you could get just changes during a given run, or user could not reset the data and build up a results set over time, but still only incur the performance overhead on a very specific section of code.
+
+I intend to be able to expand the capabilities of [Coverband](https://github.com/danmayer/coverband) using this feature as well as reduce the performance costs it currently incurs to run it.

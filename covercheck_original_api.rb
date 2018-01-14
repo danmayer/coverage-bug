@@ -7,13 +7,10 @@ def method_b
 end
 
 method_a
-
-puts Coverage.pause
-puts Coverage.peek_results
-puts Coverage.reset
+puts Coverage.result
  
 puts "this line is run betwwen coverage being enabled and shouldn't get tracked"
  
-Coverage.resume
+Coverage.start
 method_b
 puts Coverage.result
