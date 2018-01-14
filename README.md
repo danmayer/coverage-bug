@@ -7,7 +7,7 @@ to execute just run: `ruby ./example.rb`
 
 This demonstrates why Coverage from the ruby std-lib isn't useful for the kind of data I want to get from coverband.
 
-previous output (approx ruby 2.1)
+previous output (Ruby <= 2.1.1)
 
 ```ruby
 method_a called
