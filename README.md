@@ -9,7 +9,7 @@ This demonstrates why Coverage from the ruby std-lib isn't useful for the kind o
 
 previous output (approx ruby 2.1)
 
-```
+```ruby
 method_a called
 {"/Users/danmayer/projects/coverage-bug/covercheck.rb"=>[1, 1, nil, nil, 1, 0, nil, nil, 1, 1, nil, 0, nil, 0, 0, 0, nil, nil, nil, nil, nil, nil, nil, nil, nil]}
 this doesn't matter and is between coverage
@@ -19,7 +19,7 @@ method_b_called
 
 current output:
 
-```
+```ruby
 method_a called
 {"/Users/danmayer/projects/coverage-bug/covercheck.rb"=>[1, 1, nil, nil, 1, 0, nil, nil, 1, 1, nil, 0, nil, 0, 0, 0, nil, nil, nil, nil, nil, nil, nil, nil, nil]}
 this doesn't matter and is between coverage
@@ -29,7 +29,7 @@ method_b_called
 
 desired output:
 
-```
+```ruby
 method_a called
 {"/Users/danmayer/projects/coverage-bug/covercheck.rb"=>[1, 1, nil, nil, 1, 0, nil, nil, 1, 1, nil, 0, nil, 0, 0, 0, nil, nil, nil, nil, nil, nil, nil, nil, nil]}
 this doesn't matter and is between coverage
@@ -45,7 +45,7 @@ I am thinking perhaps that functionality is intended and used for some use cases
 
 Thoughts are we could add the below methods to the public API:
 
-``` 
+```ruby 
 Coverage.pause # removes event hooks, leaving data intact
 Coverage.reset # leaves all data tracking, but resets counts to 0
 Coverage.resume # adds back event hooks
@@ -87,7 +87,7 @@ puts Coverage.result
 
 The expected results would be something like below:
 
-```
+```ruby
 method_a called
 {"/Users/danmayer/projects/coverage-bug/covercheck.rb"=>[1, 1, nil, nil, 1, 0, nil, nil, 1, 1, nil, 0, nil, 0, 0, 0]}
 puts "this line is run betwwen coverage being enabled and shouldn't get tracked"
