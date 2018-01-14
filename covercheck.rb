@@ -9,7 +9,7 @@ end
 method_a
 
 puts Coverage.pause
-puts Coverage.peek_results
+puts Coverage.peek_result
 puts Coverage.reset
  
 puts "this line is run betwwen coverage being enabled and shouldn't get tracked"

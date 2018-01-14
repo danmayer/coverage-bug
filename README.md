@@ -41,7 +41,7 @@ method_b_called
 
 I would still like to have access to a re-entrant coverage, but given upstream chances since this initial bug, Ruby no longer returns `{'file.rb' => []}` as it was inaccurate to say the file had nothing. Currently, Ruby has removed all the files that were required prior to the initial coverage.start call. The method is re-entrant, but only works for **newly required** files.
 
-I am thinking perhaps that functionality is intended and used for some use cases. It doesn't fit my use case or expectations. I am now considering a different approach to achieve what I would like. I think my needs would be better met with a new API with additional functionality for the Coverage object. This is similar to how `peek_results` was added to coverage. That didn't change the current expectations of any of the existing public API.
+I am thinking perhaps that functionality is intended and used for some use cases. It doesn't fit my use case or expectations. I am now considering a different approach to achieve what I would like. I think my needs would be better met with a new API with additional functionality for the Coverage object. This is similar to how `peek_result` was added to coverage. That didn't change the current expectations of any of the existing public API.
 
 Thoughts are we could add the below methods to the public API:
 
@@ -75,7 +75,7 @@ end
 method_a
 
 puts Coverage.pause
-puts Coverage.peek_results
+puts Coverage.peek_result
 puts Coverage.reset
  
 puts "this line is run betwwen coverage being enabled and shouldn't get tracked"
